@@ -1,11 +1,11 @@
 import express from 'express'
+import { createUserController, findUserController } from '../controller/user.controller.js'
 
 const router=express.Router()
 
 
-router.get("", (req, res)=>{
-    res.send("user ok")
-})
+router.post("/create",createUserController)
+router.post("/finduser", findUserController)
 
 
 export default router
